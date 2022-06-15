@@ -2,22 +2,35 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My blog test ipv6</title>
+    <script src="https://unpkg.com/vue@next"></script>
   </head>
   
   <body>
     <h1>My Blog</h1>
-    <button>test ipv6<button>
+    <div id="app">
+      <input v-model='uri' placeholder="edit me"/>
+      <p>Message is: {{ msg }}</p>
+      <button @click="ipv6">test ipv6<button>
+    </div>
     <script>
-      function ipv6() {
-        var uri = 'http://[240e:3b3:f154:3730:a963:a7f2:b221:ebd8]:8000'
-        fetch(uri)
-          .then(resp => resp.json())
-          .then(data => {
-          let body = document.querySelector('body')
-          body.append(data.msg)
-          console.log(data)
-        })
+      const App = {
+        data() {
+          return {
+            msg: '',
+            uri: 'http://[240e:3b3:f154:3730:a963:a7f2:b221:ebd8]:8000'
+          }
+        },
+        methods: {
+          ipv6() {
+            fetch(this.uri)
+              .then(resp => resp.json())
+              .then(data => {
+                this.msg = data.msg
+            })
+          }
+        }
       }
+      Vue.createApp(App).mount('#app')
     </script>
   </body>
 <html>
