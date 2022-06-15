@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>My blog test ipv6</title>
+  </head>
+  
+  <body>
+    <h1>My Blog</h1>
+    <script>
+      var uri = 'http://[240e:3b3:f154:3730:a963:a7f2:b221:ebd8]:8000'
+      fetch(uri)
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+    </script>
+  </body>
+<html>
