@@ -1,15 +1,23 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My blog test ipv6</title>
   </head>
   
   <body>
     <h1>My Blog</h1>
+    <button>test ipv6<button>
     <script>
-      var uri = 'http://[240e:3b3:f154:3730:a963:a7f2:b221:ebd8]:8000'
-      fetch(uri)
-        .then(resp => resp.json())
-        .then(data => console.log(data))
+      function ipv6() {
+        var uri = 'http://[240e:3b3:f154:3730:a963:a7f2:b221:ebd8]:8000'
+        fetch(uri)
+          .then(resp => resp.json())
+          .then(data => {
+          let body = document.querySelector('body')
+          body.append(data.msg)
+          console.log(data)
+        })
+      }
     </script>
   </body>
 <html>
