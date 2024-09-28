@@ -15,6 +15,7 @@ if [ "$yn" = "y" ]; then
     git push origin content
 
     git checkout main
+    command rm -r categories posts tags
     command mv public/* ../
     git commit -m "A: add post"
     git checkout content
