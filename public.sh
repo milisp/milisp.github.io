@@ -19,5 +19,7 @@ if [ "$yn" = "y" ]; then
     command mv public/* ../
     git add .
     git commit -m "A: add post"
+    git push origin main
+
     git checkout content
 fi
