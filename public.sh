@@ -17,6 +17,7 @@ if [ "$yn" = "y" ]; then
     git checkout main
     command rm -r categories posts tags
     command mv public/* ../
+    git add .
     git commit -m "A: add post"
     git checkout content
 fi
