@@ -9,6 +9,7 @@ if [ "$yn" = "y" ]; then
     git checkout content
     git add content/posts/
     git commit -m "$commit_msg"
+    hugo
     command mv public/* ../
     git push origin content
 
