@@ -9,10 +9,13 @@ if [ "$yn" = "y" ]; then
     git checkout content
     git add content/posts/
     git commit -m "$commit_msg"
+    ls public
     hugo
-    command mv public/* ../
+    ls public
     git push origin content
 
     git checkout main
+    command mv public/* ../
     git commit -m "A: add post"
+    git checkout content
 fi
