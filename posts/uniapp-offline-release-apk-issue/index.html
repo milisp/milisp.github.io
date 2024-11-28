@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Uniapp Offline Release Apk Issue | Milisp Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Uniapp 发布离线打包问题，踩坑
+
+缺失模块，未添加模块
+
+解决方案, 修改 app/build.gradle
+	buildTypes {
+		release {
+			// 最小化设置为 false 解决问题
+			minifyEnabled false
+		}
+	}
+">
+    <meta name="generator" content="Hugo 0.134.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/uniapp-offline-release-apk-issue/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/uniapp-offline-release-apk-issue/">
+  <meta property="og:site_name" content="Milisp Blog">
+  <meta property="og:title" content="Uniapp Offline Release Apk Issue">
+  <meta property="og:description" content="Uniapp 发布离线打包问题，踩坑
+缺失模块，未添加模块
+解决方案, 修改 app/build.gradle buildTypes { release { // 最小化设置为 false 解决问题 minifyEnabled false } } ">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-10-01T11:37:39+08:00">
+    <meta property="article:modified_time" content="2022-10-01T11:37:39+08:00">
+
+  <meta itemprop="name" content="Uniapp Offline Release Apk Issue">
+  <meta itemprop="description" content="Uniapp 发布离线打包问题，踩坑
+缺失模块，未添加模块
+解决方案, 修改 app/build.gradle buildTypes { release { // 最小化设置为 false 解决问题 minifyEnabled false } } ">
+  <meta itemprop="datePublished" content="2022-10-01T11:37:39+08:00">
+  <meta itemprop="dateModified" content="2022-10-01T11:37:39+08:00">
+  <meta itemprop="wordCount" content="18">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Uniapp Offline Release Apk Issue">
+  <meta name="twitter:description" content="Uniapp 发布离线打包问题，踩坑
+缺失模块，未添加模块
+解决方案, 修改 app/build.gradle buildTypes { release { // 最小化设置为 false 解决问题 minifyEnabled false } } ">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Milisp Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Uniapp Offline Release Apk Issue</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-10-01T11:37:39+08:00">October 1, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Uniapp 发布离线打包问题，踩坑</p>
+<blockquote>
+<p>缺失模块，未添加模块</p>
+</blockquote>
+<h2 id="解决方案-修改-appbuildgradle">解决方案, 修改 <code>app/build.gradle</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-app/build.gradle" data-lang="app/build.gradle"><span style="display:flex;"><span>	buildTypes <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		release <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// 最小化设置为 false 解决问题
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			minifyEnabled <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Milisp Blog 2024 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
