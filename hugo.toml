@@ -1,0 +1,4 @@
+baseURL = 'https://milisp.github.io/'
+languageCode = 'en-us'
+title = 'Milisp Blog'
+theme = 'ananke'
