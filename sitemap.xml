@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-11-28T17:44:43+08:00</lastmod>
+    <lastmod>2024-11-28T19:03:54+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-11-28T17:44:43+08:00</lastmod>
+    <lastmod>2024-11-28T19:03:54+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/stable-diffusion-params/</loc>
+    <lastmod>2024-11-28T19:03:54+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/python-bug-fixing-process/</loc>
     <lastmod>2024-11-28T17:44:43+08:00</lastmod>
